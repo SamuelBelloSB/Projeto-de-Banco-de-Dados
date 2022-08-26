@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/samuelbello/ontologies/2021/11/SamuelBello"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/samuelbello/ontologies/2021/11/SamuelBello">
+    <Prefix name="" IRI="http://www.semanticweb.org/samuelbello/ontologies/2021/11/TrabalhoOntologias"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Compreensão"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Computador"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EquipamentoAudiovisual"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeiosDeEnsino"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Percepção"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#facilitam"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#utiliza"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dell_Vostro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Epson_PowerLite_L510U"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tecnológico"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#MeiosDeEnsino"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#usa"/>
+                <Class IRI="#Computador"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#utiliza"/>
+                <Class IRI="#EquipamentoAudiovisual"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#MeiosDeEnsino"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#facilitam"/>
+                <Class IRI="#Compreensão"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#facilitam"/>
+                <Class IRI="#Percepção"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#usa"/>
+        <NamedIndividual IRI="#Tecnológico"/>
+        <NamedIndividual IRI="#Dell_Vostro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#utiliza"/>
+        <NamedIndividual IRI="#Tecnológico"/>
+        <NamedIndividual IRI="#Epson_PowerLite_L510U"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#facilitam"/>
+        <Class IRI="#MeiosDeEnsino"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#usa"/>
+        <Class IRI="#MeiosDeEnsino"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#utiliza"/>
+        <Class IRI="#MeiosDeEnsino"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#facilitam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Compreensão"/>
+            <Class IRI="#Percepção"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#usa"/>
+        <Class IRI="#Computador"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#utiliza"/>
+        <Class IRI="#EquipamentoAudiovisual"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Computador</IRI>
+        <Literal>Computador é um conjunto de componentes eletrônicos (máquina) capaz de executar variados tipos de algoritmos e tratamento de informações (processamento de dados).
+(Fonte: https://pt.wikipedia.org/wiki/Computador)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EquipamentoAudiovisual</IRI>
+        <Literal>Os equipamentos audiovisuais oferecem suporte e atratividade para conseguir enviar a mensagem a ser entregue via áudio e visual.Através do uso dos equipamentos audiovisuais, haverá a complementação de uma aula, reunião, palestra e tantos outros eventos.
+(Fonte: https://www.jrmaq.com.br/equipamentos-audiovisuais)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MeiosDeEnsino</IRI>
+        <Literal>Os meios de ensino-aprendizagem (também denominados recursos didáticos) são elementos que auxiliam na execução do processo de ensino-aprendizagem. São muitíssimo importantes porque aproximam o aluno à realidade, facilitam a percepção e compreensão dos conteúdos e tornam o ensino mais ativo e concreto.
+(Fonte: http://ead.mined.gov.mz/manuais/Psicopedagogia/aula4-5.html)</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
